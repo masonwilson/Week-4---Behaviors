@@ -41,7 +41,7 @@ public class DoorMovement : MonoBehaviour
             MoveSide(distanceTraveled, totalMoveDistance);
         }
     }
-
+    
     void OnTriggerStay(Collider thing)
     {
         float distanceTraveled = GetDistanceTraveled();
@@ -51,7 +51,7 @@ public class DoorMovement : MonoBehaviour
         }
         // endingLocation = gameObject.transform.position;
     }
-    /*
+    
     void OnTriggerExit(Collider thing)
     {
         float distanceTraveled = GetDistanceTraveledReversed();
@@ -60,7 +60,7 @@ public class DoorMovement : MonoBehaviour
             gameObject.transform.position = startingLocation;   
         }
     }
-    */
+    
 
     void MoveSide(float distanceTraveled, float totalMoveDistance)
     {
