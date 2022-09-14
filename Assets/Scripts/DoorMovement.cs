@@ -31,14 +31,16 @@ public class DoorMovement : MonoBehaviour
     }
     
     void OnTriggerEnter(Collider other)
-    {
+    {   
+        // i want this to happed only for person (doors are colliding with each other 
+
         float distanceTraveled = GetDistanceTraveled();
         MoveSide(distanceTraveled, totalMoveDistance);
     }
 
     void MoveSide(float distanceTraveled, float totalMoveDistance)
     {
-        while (distanceTraveled <= totalMoveDistance)
+        if (distanceTraveled <= totalMoveDistance)
         {
             gameObject.transform.Translate(moveDirection * moveSpeed);
 
